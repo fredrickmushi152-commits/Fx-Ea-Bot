@@ -1,3 +1,10 @@
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return render_template('index.html')
 from flask import Flask, request, jsonify
 import pandas as pd
 import ta
